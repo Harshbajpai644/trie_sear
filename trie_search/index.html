@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dictionary Search — Trie</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .wrap { max-width: 560px; margin: 80px auto; padding: 0 20px; }
+  .title { font-size: 15px; font-weight: 600; color: #111; margin-bottom: 10px; }
+  .search-box { position: relative; }
+  .search-input {
+    width: 100%;
+    padding: 11px 36px 11px 12px;
+    font-size: 16px;
+    border: 1.5px solid #bbb;
+    border-radius: 8px;
+    outline: none;
+    color: #111;
+    transition: border-color 0.15s;
+  }
+  .search-input:focus { border-color: #111; }
+  #clearBtn {
+    position: absolute; right: 10px; top: 50%;
+    transform: translateY(-50%);
+    background: none; border: none;
+    color: #aaa; font-size: 22px; cursor: pointer;
+    display: none;
+  }
+  #clearBtn:hover { color: #111; }
+  #dropdown {
+    border: 1.5px solid #bbb;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+    max-height: 340px;
+    overflow-y: auto;
+    display: none;
+  }
+  .count-row { padding: 6px 12px; font-size: 12px; color: #888; border-bottom: 1px solid #eee; }
+  .item {
+    padding: 9px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .item:last-child { border-bottom: none; }
+  .item:hover, .item.active { background: #f5f5f5; color: #111; }
+  .item b { font-weight: 700; color: #111; }
+  .no-result { padding: 14px 12px; font-size: 14px; color: #999; }
+  .info { font-size: 12px; color: #bbb; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">suggest Search — Trie Algorithm</div>
+  <div class="search-box">
+    <input id="searchInput" class="search-input" placeholder='type  — "ap", "se", "dat"...' autocomplete="off" autofocus />
+    <button id="clearBtn" onclick="clearSearch()">×</button>
+    <div id="dropdown"></div>
+  </div>
+  <div class="info" id="info"></div>
+</div>
+
+<script src="trie.js"></script>
+<script src="words.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
