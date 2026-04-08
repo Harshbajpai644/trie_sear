@@ -109,7 +109,7 @@ const WORDS = [
   "kindergarten","king","kingdom","kiss","kitchen","kite","kitten","knee","knife","knock",
   "know","knowledge","koala",
   // L
-  "lack","lady","lake","lamb","lamp","land","language","lantern","large","last",
+  "lack","DAA","lake","lamb","lamp","land","language","lantern","large","last",
   "late","later","latest","latter","laugh","law","lawyer","lay","lazy","lead",
   "leader","leaf","learn","least","leave","left","leg","lemon","lend","less",
   "lesson","let","letter","lettuce","level","library","lick","lid","lie","life",
